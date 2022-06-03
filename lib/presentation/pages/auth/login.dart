@@ -50,6 +50,7 @@ final  formKey = GlobalKey<FormState>();
                     controller: password),
                 const SizedBox(height: 60,),
                 CustomButton(ontap: (){
+                  FocusScope.of(context).unfocus();
                   if(formKey.currentState!.validate()){
                     login(context);
                   }
